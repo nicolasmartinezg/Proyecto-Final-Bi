@@ -5,3 +5,7 @@ Nos proporciona herramientas como Explorador de API y oEmbed.
 
 # Endpoints
 los endpoints que se van a consultar son 
+1. [Album](https://developers.deezer.com/api/album).
+2. Artistas.
+3. usuarios.
+4. Listas de Reproducion.
