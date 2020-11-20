@@ -11,3 +11,9 @@ los endpoints que se van a consultar son
 4. [Listas de Reproducion](https://developers.deezer.com/api/playlist).
 
 # Estrategias Para Consultar La API
+
+
+# Cuentas de los colaboradores en el proyecto
+
+1. [Nicolas Martinez Gomez](https://github.com/nicolasmartinezg).
+2. [Maria Alejandra Naranjo Martinez](https://github.com/mariahlejita-dg).
