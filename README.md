@@ -9,3 +9,5 @@ los endpoints que se van a consultar son
 2. [Artistas](https://developers.deezer.com/api/artist).
 3. [usuarios](https://developers.deezer.com/api/user).
 4. [Listas de Reproducion](https://developers.deezer.com/api/playlist).
+
+# Estrategias Para Consultar La API
