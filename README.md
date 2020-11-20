@@ -13,10 +13,10 @@ los endpoints que se van a consultar son
 4. [Listas de Reproducion](https://developers.deezer.com/api/playlist).
 
 # Estrategias Para Consultar La API
-
+[Tutorial Consultado](https://alexis-gomes19.medium.com/deezers-api-with-python-c3bf8c61610f).
 ## Lenguaje de programación
 
-Python
+Phyton
 
 # Framework
 
@@ -24,7 +24,10 @@ PyCharm
 
 # Librerias
 
-request: nos permite enviar solicitudes HTTP con Python sin necesidad de tanta labor manual, haciendo que la integración con los servicios web sea mucho más fácil . 
+request: nos permite enviar solicitudes HTTP con Python sin necesidad de tanta labor manual, haciendo que la integración con los servicios web sea mucho más fácil.
+
+
+Flask.
 
 
 # Cuentas de los colaboradores en el proyecto
