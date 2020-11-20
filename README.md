@@ -3,6 +3,8 @@ Para el proyecto se va a utilizar la API de deezer la cual nos brinda un gran co
 Deezer API nos da permisos como: Acceder a la información básica de los usuarios, obtener el correo electrónico del usuario, acceder a los datos del usuario en cualquier momento, administrar la biblioteca de los usuarios, permitir que la aplicación acceda al historial de escucha del usuario, entre otros.
 Además nos proporciona herramientas como Explorador de API y oEmbed.
 
+Link: https://developers.deezer.com/api
+
 # Endpoints
 los endpoints que se van a consultar son 
 1. [Album](https://developers.deezer.com/api/album).
@@ -11,6 +13,17 @@ los endpoints que se van a consultar son
 4. [Listas de Reproducion](https://developers.deezer.com/api/playlist).
 
 # Estrategias Para Consultar La API
+
+## Lenguaje de programación
+
+Phyton
+
+# Framework
+
+PyCharm
+
+# Librerias
+
 
 
 # Cuentas de los colaboradores en el proyecto
