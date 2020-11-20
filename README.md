@@ -21,7 +21,7 @@ Requisito previo
 
 ## Lenguaje de programación
 
-Phyton
+Python
 
 # Framework
 
