@@ -14,15 +14,15 @@ los endpoints que se van a consultar son
 
 # Estrategias Para Consultar La API
 
-## Lenguaje de programación
+### Lenguaje de programación
 
 Phyton
 
-# Framework
+### Framework
 
 PyCharm
 
-# Librerias
+### Librerias
 
 
 
