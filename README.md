@@ -16,7 +16,7 @@ los endpoints que se van a consultar son
 
 ### Lenguaje de programación
 
-Phyton
+Python
 
 ### Framework
 
