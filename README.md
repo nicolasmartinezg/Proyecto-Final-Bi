@@ -13,16 +13,21 @@ los endpoints que se van a consultar son
 4. [Listas de Reproducion](https://developers.deezer.com/api/playlist).
 
 # Estrategias Para Consultar La API
+Requisito previo
 
-### Lenguaje de programación
+-Necesitas una cuenta de Deezer.
+-Vaya a https://developers.deezer.com/myapps y cree una nueva aplicación. Puede configurar http://127.0.0.1:5000/deezer/login en el campo Redirigir URL .
+*Necesitará su ID de aplicación , clave secreta y la URL de redireccionamiento para usar la API.
 
-Python
+## Lenguaje de programación
 
-### Framework
+Phyton
+
+# Framework
 
 PyCharm
 
-### Librerias
+# Librerias
 
 
 
