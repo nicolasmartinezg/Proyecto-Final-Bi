@@ -68,7 +68,7 @@ BASE_URL = 'https://api.deezer.com/artist/4860761/playlists?limit=100'
 BASE_URL_Seguidores = 'https://api.deezer.com/artist/4860761/fans?limit=100'
 #base url que me muestra todos los album de Jbalvin
 BASE_URL_Album = 'https://api.deezer.com/artist/4860761/albums?limit=100'
-
+BASE_URL_Canciones = 'https://api.deezer.com/search?q=j balvin&limit=290'
 # convertir los datos traidos de la url de los playlist del Artista en formato json
 response= requests.get(BASE_URL)
 r = response.json()
@@ -78,7 +78,9 @@ fans = datos.json()
 #convertir los datos traidos de la url de los album del artista en formato json
 datos1= requests.get(BASE_URL_Album)
 album= datos1.json()
-
+#convertir los datos traidos de la url de las canciones del artista en formato json
+datos2= requests.get(BASE_URL_Canciones)
+canciones= datos2.json()
 
 # guardar el json de los playlist de jbalvin como archivo
 with open('PlayList JBalvin.json', 'w') as f:
@@ -92,8 +94,9 @@ with open('fans J Balvin.json', 'w') as f:
 #guardar album
 with open('Album J Balvin.json', 'w') as f:
     json.dump(album, f, indent=4, sort_keys=True)
-
-
+#guardar cansiones de jBalvin
+with open('canciones J Balvin.json', 'w') as f:
+    json.dump(canciones, f, indent=4, sort_keys=True)
 
 
 #credenciales para establecer la conexion con AWS
@@ -137,3 +140,6 @@ client.upload_file('fans J Balvin.json', BUCKET_NAME, upload_file_key)
 #guardar todos los album del artista Jbalvin en s3
 upload_file_key = 'Artistas/'+'JBalvin/'+'Albums/' + 'Album J Balvin.json'
 client.upload_file('Album J Balvin.json', BUCKET_NAME, upload_file_key)
+#guardar todas las canciones de jBalvin
+upload_file_key = 'Artistas/'+'JBalvin/'+'canciones/' + 'canciones J Balvin.json'
+client.upload_file('canciones J Balvin.json', BUCKET_NAME, upload_file_key)
