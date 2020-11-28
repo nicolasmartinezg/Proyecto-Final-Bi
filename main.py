@@ -90,7 +90,7 @@ with open('PlayList JBalvin.json', 'w') as f:
 # guardar el json de los fans de jbalvin como archivo
 with open('fans J Balvin.json', 'w') as f:
     json.dump(fans, f, indent=4, sort_keys=True)
-    
+
 #guardar album
 with open('Album J Balvin.json', 'w') as f:
     json.dump(album, f, indent=4, sort_keys=True)
@@ -99,9 +99,68 @@ with open('canciones J Balvin.json', 'w') as f:
     json.dump(canciones, f, indent=4, sort_keys=True)
 
 
+#EndPoints del Usuario 2 ----------------------------------------------------------------------------------------------------------------------------
+
+#Url para consultar las canciones favoritas del usuario 2--------------------------------------------------------------------------------------------
+URL_CANCIONES_FAVORITAS = "https://api.deezer.com/user/4039239222/tracks?limit=1656"
+lc = requests.get(URL_CANCIONES_FAVORITAS)
+jFavoritas = lc.json()
+#Guardar canciones del usuario 2
+with open('canciones favoritas usuario 2.json', 'w') as e:
+    json.dump(jFavoritas, e, indent=4, sort_keys=True)
+
+#Url para consultar los artistas favoritos del usuario 2-----------------------------------------------------------------------------------------------
+URL_ARTISTAS_FAVORITOS2 = "https://api.deezer.com/user/4039239222/artists?limit=41"
+la = requests.get(URL_ARTISTAS_FAVORITOS2)
+jArtistas = la.json()
+#Guardar Artistas favoritos del usuario 2
+with open('artistas favoritos usuario 2.json', 'w') as e:
+    json.dump(jArtistas, e, indent=4, sort_keys=True)
+
+#consultar las PlayList del usuario 2---------------------------------------------------------------------------------------------------------
+
+#Url Playlist 1
+URL_PLAYLIST_1 = "https://api.deezer.com/playlist/8416193362/tracks?limit=50"
+lr1 = requests.get(URL_PLAYLIST_1)
+jPlayList1 = lr1.json()
+#Guardar PlayList 1 del usuario 2
+with open('playlist 1  usuario 2.json', 'w') as e:
+    json.dump(jPlayList1, e, indent=4, sort_keys=True)
+#Url PlayList 2
+URL_PLAYLIST_2 = "https://api.deezer.com/playlist/1098908237/tracks?limit=50"
+lr2 = requests.get(URL_PLAYLIST_2)
+jPlayList2 = lr2.json()
+#Guardar PlayList 2 del usuario 2
+with open('playlist 2  usuario 2.json', 'w') as e:
+    json.dump(jPlayList2, e, indent=4, sort_keys=True)
+
+#Url PlayList 3
+URL_PLAYLIST_3 = "https://api.deezer.com/playlist/8311123682/tracks?limit=50"
+lr3 = requests.get(URL_PLAYLIST_3)
+jPlayList3 = lr3.json()
+#Guardar PlayList 3 del usuario 2
+with open('playlist 3  usuario 2.json', 'w') as e:
+    json.dump(jPlayList3, e, indent=4, sort_keys=True)
+
+#Url PlayList 4
+URL_PLAYLIST_4 = "https://api.deezer.com/playlist/3114195306/tracks?limit=50"
+lr4 = requests.get(URL_PLAYLIST_4)
+jPlayList4 = lr4.json()
+#Guardar PlayList 4 del usuario 2
+with open('playlist 4  usuario 2.json', 'w') as e:
+    json.dump(jPlayList4, e, indent=4, sort_keys=True)
+
+#Url PlayList 5
+URL_PLAYLIST_5 = "https://api.deezer.com/playlist/6750169864/tracks?limit=50"
+lr5 = requests.get(URL_PLAYLIST_5)
+jPlayList5 = lr5.json()
+#Guardar PlayList 5 del usuario 2
+with open('playlist 5  usuario 2.json', 'w') as e:
+    json.dump(jPlayList5, e, indent=4, sort_keys=True)
+
 #credenciales para establecer la conexion con AWS
-ACCESS_KEY_ID =  "AKIASCCE5URANBAUR4MU"
-ACCESS_SECRET_KEY = "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"
+ACCESS_KEY_ID =  "AKIASCCE5URAFIEVDIQA"
+ACCESS_SECRET_KEY = "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"
 BUCKET_NAME = 'pruebasproyectofinal'
 
 
@@ -143,3 +202,28 @@ client.upload_file('Album J Balvin.json', BUCKET_NAME, upload_file_key)
 #guardar todas las canciones de jBalvin
 upload_file_key = 'Artistas/'+'JBalvin/'+'canciones/' + 'canciones J Balvin.json'
 client.upload_file('canciones J Balvin.json', BUCKET_NAME, upload_file_key)
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar información del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'Canciones Favoritas/' + 'canciones favoritas usuario 2.json'
+client.upload_file('canciones favoritas usuario 2.json', BUCKET_NAME, upload_file_key)
+
+
+#Guardar informacion de los Artistas favoritos del Usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'Artistas Favoritos/' + 'artistas favoritos usuario 2.json'
+client.upload_file('artistas favoritos usuario 2.json', BUCKET_NAME, upload_file_key)
+#Guardar PlayList 1 del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 1  usuario 2.json'
+client.upload_file('playlist 1  usuario 2.json', BUCKET_NAME, upload_file_key)
+#Guardar PlayList 2 del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 2  usuario 2.json'
+client.upload_file('playlist 2  usuario 2.json', BUCKET_NAME, upload_file_key)
+#Guardar PlayList 3 del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 3  usuario 2.json'
+client.upload_file('playlist 3  usuario 2.json', BUCKET_NAME, upload_file_key)
+#Guardar PlayList 4 del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 4  usuario 2.json'
+client.upload_file('playlist 4  usuario 2.json', BUCKET_NAME, upload_file_key)
+#Guardar PlayList 5 del usuario 2 en S3
+upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 5  usuario 2.json'
+client.upload_file('playlist 5  usuario 2.json', BUCKET_NAME, upload_file_key)
