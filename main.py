@@ -20,11 +20,6 @@ auth_response = requests.post(DEEZER_REDIRECT_URI, {
 })
 
 
-
-
-
-
-
 #EndPoints de el usuario 1-------------------------------------------------------------------------------------------------------------------
 #base url para consultar las canciones favoritas del usuario 1
 BASE_URL_CANCIONES_FAVORITAS = 'https://api.deezer.com/user/2605858862/tracks?limit=901'
@@ -159,10 +154,7 @@ jPlayList5 = lr5.json()
 with open('playlist 5  usuario 2.json', 'w') as e:
     json.dump(jPlayList5, e, indent=4, sort_keys=True)
 
-#credenciales para establecer la conexion con AWS
-ACCESS_KEY_ID =  "AKIASCCE5URAFIEVDIQA"
-ACCESS_SECRET_KEY = "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"
-BUCKET_NAME = 'pruebasproyectofinal'
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 #Información del Artista Andres Cepeda
@@ -322,7 +314,33 @@ jfCamilo = fCamilo.json()
 with open('fans Camilo.json', 'w') as e:
     json.dump(jfCamilo, e, indent=4, sort_keys=True)
 #------------------------------------------------------------------------------------------------------------------------------------------------------
+#EndPoints para realizar busquedas
 
+#URL para sacar las canciones con un bpm min 120
+URL_BPM_MIN120='https://api.deezer.com/search?q=bpm_min:120&limit=137'
+bpm= requests.get(URL_BPM_MIN120)
+bpm120=bpm.json()
+#guardar json
+with open('canciones BPM min120.json', 'w') as e:
+    json.dump(bpm120, e, indent=4, sort_keys=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#credenciales para establecer la conexion con AWS
+ACCESS_KEY_ID =  "AKIASCCE5URAFIEVDIQA"
+ACCESS_SECRET_KEY = "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"
+BUCKET_NAME = 'pruebasproyectofinal'
 client = boto3.client(
     's3',
     aws_access_key_id=ACCESS_KEY_ID,
@@ -500,3 +518,6 @@ client.upload_file('canciones Camilo.json', BUCKET_NAME, upload_file_key)
 upload_file_key = 'Artistas/'+'Camilo/'+'Fans/' + 'fans Camilo.json'
 client.upload_file('fans Camilo.json', BUCKET_NAME, upload_file_key)
 
+#canciones que tienen un bpm min de 120
+upload_file_key = 'Busquedas/'+'BPM_MIN_120/'+'canciones BPM min120.json'
+client.upload_file('canciones BPM min120.json', BUCKET_NAME, upload_file_key)
