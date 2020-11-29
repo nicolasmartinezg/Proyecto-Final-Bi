@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests
 import pandas as pd
 import json
@@ -63,7 +64,7 @@ with open('PlayList3 usuario1.json', 'w') as f:
 
 # base URL of all Deezer API endpoints
 #base url que me muestra todos los playlist del artista J Balvin
-BASE_URL = 'https://api.deezer.com/artist/4860761/playlists?limit=100'
+BASE_URL = 'https://api.deezer.com/search/playlist?q=j balvin&limit=300'
 #base url que me muestra todos los seguidores de J Balvin
 BASE_URL_Seguidores = 'https://api.deezer.com/artist/4860761/fans?limit=100'
 #base url que me muestra todos los album de Jbalvin
