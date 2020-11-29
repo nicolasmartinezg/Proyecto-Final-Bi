@@ -163,8 +163,164 @@ ACCESS_KEY_ID =  "AKIASCCE5URAFIEVDIQA"
 ACCESS_SECRET_KEY = "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"
 BUCKET_NAME = 'pruebasproyectofinal'
 
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+#Información del Artista Andres Cepeda
 
+#PlayList
+URL_PLAYLIST_ANDRES = "https://api.deezer.com/artist/1059594/playlists?limit=72"
+pAndres = requests.get(URL_PLAYLIST_ANDRES)
+jpAndres = pAndres.json()
+#Guardar playlist
+with open('playlist AndresCepeda.json', 'w') as e:
+    json.dump(jpAndres, e, indent=4, sort_keys=True)
+#Albunes
+URL_ALBUM_ANDRES = "https://api.deezer.com/artist/1059594/albums?limit=41"
+alAndres = requests.get(URL_ALBUM_ANDRES)
+jalAndres = alAndres.json()
+#Guardar albums
+with open('albums AndresCepeda.json', 'w') as e:
+    json.dump(jalAndres, e, indent=4, sort_keys=True)
+#Canciones
+URL_CANCIONES_ANDRES = "https://api.deezer.com/search?q= andres cepeda&limit=300"
+cAndres = requests.get(URL_CANCIONES_ANDRES)
+jcAndres = cAndres.json()
+#Guardar canciones
+with open('canciones AndresCepeda.json', 'w') as e:
+    json.dump(jcAndres, e, indent=4, sort_keys=True)
+#Fans
+URL_FANS_ANDRES = "https://api.deezer.com/artist/1059594/fans?limit=100"
+fAndres = requests.get(URL_FANS_ANDRES)
+jfAndres = fAndres.json()
+#Guardar fans
+with open('fans AndresCepeda.json', 'w') as e:
+    json.dump(jfAndres, e, indent=4, sort_keys=True)
+#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#Información de la artista Shakira
+
+#Playlist
+URL_PLAYLIST_SHAKIRA = "https://api.deezer.com/artist/160/playlists?limit=100"
+pShakira = requests.get(URL_PLAYLIST_SHAKIRA)
+jpShakira = pShakira.json()
+#Guardar playlist
+with open('playlist Shakira.json', 'w') as e:
+    json.dump(jpShakira, e, indent=4, sort_keys=True)
+#Albums
+URL_ALBUM_SHAKIRA = "https://api.deezer.com/artist/160/albums?limit=44"
+alShakira = requests.get(URL_ALBUM_SHAKIRA)
+jalShakira = alShakira.json()
+#Guardar albums
+with open('albums Shakira.json', 'w') as e:
+    json.dump(jalShakira, e, indent=4, sort_keys=True)
+#Canciones
+URL_CANCIONES_SHAKIRA = "https://api.deezer.com/search?q= shakira&limit=261"
+cShakira = requests.get(URL_CANCIONES_SHAKIRA)
+jcShakira= cShakira.json()
+#Guardar canciones
+with open('canciones Shakira.json', 'w') as e:
+    json.dump(jcShakira, e, indent=4, sort_keys=True)
+#Fans
+URL_FANS_SHAKIRA = "https://api.deezer.com/artist/160/fans?limit=100"
+fShakira = requests.get(URL_FANS_SHAKIRA)
+jfShakira = fShakira.json()
+#Guardar fans
+with open('fans Shakira.json', 'w') as e:
+    json.dump(jfShakira, e, indent=4, sort_keys=True)
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+#Información del artista Carlos Vives
+
+#Playlist
+URL_PLAYLIST_CARLOS = "https://api.deezer.com/artist/7343/playlists?limit=100"
+pCarlos = requests.get(URL_PLAYLIST_CARLOS)
+jpCarlos = pCarlos.json()
+#Guardar playlist
+with open('playlist Carlos Vives.json', 'w') as e:
+    json.dump(jpCarlos, e, indent=4, sort_keys=True)
+#Albums
+URL_ALBUM_CARLOS = "https://api.deezer.com/artist/7343/albums?limit=43"
+alCarlos = requests.get(URL_ALBUM_CARLOS)
+jalCarlos = alCarlos.json()
+#Guardar albums
+with open('albums Carlos Vives.json', 'w') as e:
+    json.dump(jalCarlos, e, indent=4, sort_keys=True)
+#Canciones
+URL_CANCIONES_CARLOS = "https://api.deezer.com/search?q= carlos vives&limit=289"
+cCarlos = requests.get(URL_CANCIONES_CARLOS)
+jcCarlos = cCarlos.json()
+#Guardar canciones
+with open('canciones Carlos Vives.json', 'w') as e:
+    json.dump(jcCarlos, e, indent=4, sort_keys=True)
+#Fans
+URL_FANS_CARLOS = "https://api.deezer.com/artist/7343/fans?limit=100"
+fCarlos = requests.get(URL_FANS_CARLOS)
+jfCarlos = fCarlos.json()
+#Guardar fans
+with open('fans Carlos.json', 'w') as e:
+    json.dump(jfCarlos, e, indent=4, sort_keys=True)
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+#Información de la artista Greeicy
+
+#Playlist
+URL_PLAYLIST_GREEICY = "https://api.deezer.com/artist/12944237/playlists?limit=100"
+pGreeicy = requests.get(URL_PLAYLIST_GREEICY)
+jpGreeicy = pGreeicy.json()
+#Guardar playlist
+with open('playlist Greeicy.json', 'w') as e:
+    json.dump(jpGreeicy, e, indent=4, sort_keys=True)
+#Albums
+URL_ALBUM_GREEICY = "https://api.deezer.com/artist/12944237/albums?limit=39"
+alGreeicy = requests.get(URL_ALBUM_GREEICY)
+jalGreeicy = alGreeicy.json()
+#Guardar albums
+with open('albums Greeicy.json', 'w') as e:
+    json.dump(jalGreeicy, e, indent=4, sort_keys=True)
+#Canciones
+URL_CANCIONES_GREEICY = "https://api.deezer.com/search?q= greeicy&limit=294"
+cGreeicy= requests.get(URL_CANCIONES_GREEICY)
+jcGreeicy= cGreeicy.json()
+#Guardar canciones
+with open('canciones Greeicy.json', 'w') as e:
+    json.dump(jcGreeicy, e, indent=4, sort_keys=True)
+#Fans
+URL_FANS_GREEICY = "https://api.deezer.com/artist/12944237/fans?limit=100"
+fGreeicy = requests.get(URL_FANS_GREEICY)
+jfGreeicy = fGreeicy.json()
+#Guardar fans
+with open('fans Greeicy.json', 'w') as e:
+    json.dump(jfGreeicy, e, indent=4, sort_keys=True)
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+#Información del artista Camilo
+
+#Playlist
+URL_PLAYLIST_CAMILO = "https://api.deezer.com/artist/58568762/playlists?limit=100"
+pCamilo = requests.get(URL_PLAYLIST_CAMILO)
+jpCamilo = pCamilo.json()
+#Guardar playlist
+with open('playlist Camilo.json', 'w') as e:
+    json.dump(jpCamilo, e, indent=4, sort_keys=True)
+#Albums
+URL_ALBUM_CAMILO = "https://api.deezer.com/artist/58568762/albums?limit=18"
+alCamilo = requests.get(URL_ALBUM_CAMILO)
+jalCamilo = alCamilo.json()
+#Guardar albums
+with open('albums Camilo.json', 'w') as e:
+    json.dump(jalCamilo, e, indent=4, sort_keys=True)
+#Canciones
+URL_CANCIONES_CAMILO = "https://api.deezer.com/search?q= Camilo&limit=299"
+cCamilo = requests.get(URL_CANCIONES_CAMILO)
+jcCamilo = cCamilo.json()
+#Guardar canciones
+with open('canciones Camilo.json', 'w') as e:
+    json.dump(jcCamilo, e, indent=4, sort_keys=True)
+#Fans
+URL_FANS_CAMILO = "https://api.deezer.com/artist/58568762/fans?limit=100"
+fCamilo = requests.get(URL_FANS_CAMILO)
+jfCamilo = fCamilo.json()
+#Guardar fans
+with open('fans Camilo.json', 'w') as e:
+    json.dump(jfCamilo, e, indent=4, sort_keys=True)
+#------------------------------------------------------------------------------------------------------------------------------------------------------
 
 client = boto3.client(
     's3',
@@ -207,8 +363,6 @@ client.upload_file('canciones J Balvin.json', BUCKET_NAME, upload_file_key)
 #Guardar información del usuario 2 en S3
 upload_file_key = 'Usuarios/'+'2Usuario/'+'Canciones Favoritas/' + 'canciones favoritas usuario 2.json'
 client.upload_file('canciones favoritas usuario 2.json', BUCKET_NAME, upload_file_key)
-
-
 #Guardar informacion de los Artistas favoritos del Usuario 2 en S3
 upload_file_key = 'Usuarios/'+'2Usuario/'+'Artistas Favoritos/' + 'artistas favoritos usuario 2.json'
 client.upload_file('artistas favoritos usuario 2.json', BUCKET_NAME, upload_file_key)
@@ -227,3 +381,121 @@ client.upload_file('playlist 4  usuario 2.json', BUCKET_NAME, upload_file_key)
 #Guardar PlayList 5 del usuario 2 en S3
 upload_file_key = 'Usuarios/'+'2Usuario/'+'PlayLists/' +'playlist 5  usuario 2.json'
 client.upload_file('playlist 5  usuario 2.json', BUCKET_NAME, upload_file_key)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar informacion del artista Andres Cepeda en S3
+
+#Playlists
+
+upload_file_key = 'Artistas/'+'AndresCepeda/'+'PlayList/' + 'playlist AndresCepeda.json'
+client.upload_file('playlist AndresCepeda.json', BUCKET_NAME, upload_file_key)
+
+#albums
+
+upload_file_key = 'Artistas/'+'AndresCepeda/'+'Albums/' + 'albums AndresCepeda.json'
+client.upload_file('albums AndresCepeda.json', BUCKET_NAME, upload_file_key)
+
+#Canciones
+
+upload_file_key = 'Artistas/'+'AndresCepeda/'+'canciones/' + 'canciones AndresCepeda.json'
+client.upload_file('canciones AndresCepeda.json', BUCKET_NAME, upload_file_key)
+
+#Fans
+
+upload_file_key = 'Artistas/'+'AndresCepeda/'+'Fans/' + 'fans AndresCepeda.json'
+client.upload_file('fans AndresCepeda.json', BUCKET_NAME, upload_file_key)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar informacion del artista Shakira en S3
+
+#Playlists
+
+upload_file_key = 'Artistas/'+'Shakira/'+'PlayList/' + 'playlist Shakira.json'
+client.upload_file('playlist Shakira.json', BUCKET_NAME, upload_file_key)
+
+#albums
+
+upload_file_key = 'Artistas/'+'Shakira/'+'Albums/' + 'albums Shakira.json'
+client.upload_file('albums Shakira.json', BUCKET_NAME, upload_file_key)
+
+#Canciones
+
+upload_file_key = 'Artistas/'+'Shakira/'+'canciones/' + 'canciones Shakira.json'
+client.upload_file('canciones Shakira.json', BUCKET_NAME, upload_file_key)
+
+#Fans
+
+upload_file_key = 'Artistas/'+'Shakira/'+'Fans/' + 'fans Shakira.json'
+client.upload_file('fans Shakira.json', BUCKET_NAME, upload_file_key)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar informacion del artista Carlos Vives en S3
+#Playlists
+
+upload_file_key = 'Artistas/'+'CarlosVives/'+'PlayList/' + 'playlist Carlos Vives.json'
+client.upload_file('playlist Carlos Vives.json', BUCKET_NAME, upload_file_key)
+
+#albums
+
+upload_file_key = 'Artistas/'+'CarlosVives/'+'Albums/' + 'albums Carlos Vives.json'
+client.upload_file('albums Carlos Vives.json', BUCKET_NAME, upload_file_key)
+
+#Canciones
+
+upload_file_key = 'Artistas/'+'CarlosVives/'+'canciones/' + 'canciones Carlos Vives.json'
+client.upload_file('canciones Carlos Vives.json', BUCKET_NAME, upload_file_key)
+
+#Fans
+
+upload_file_key = 'Artistas/'+'CarlosVives/'+'Fans/' + 'fans Carlos.json'
+client.upload_file('fans Carlos.json', BUCKET_NAME, upload_file_key)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar informacion del artista Greeicy en S3
+#Playlists
+
+upload_file_key = 'Artistas/'+'Greeicy/'+'PlayList/' + 'playlist Greeicy.json'
+client.upload_file('playlist Greeicy.json', BUCKET_NAME, upload_file_key)
+
+#albums
+
+upload_file_key = 'Artistas/'+'Greeicy/'+'Albums/' + 'albums Greeicy.json'
+client.upload_file('albums Greeicy.json', BUCKET_NAME, upload_file_key)
+
+#Canciones
+
+upload_file_key = 'Artistas/'+'Greeicy/'+'canciones/' + 'canciones Greeicy.json'
+client.upload_file('canciones Greeicy.json', BUCKET_NAME, upload_file_key)
+
+#Fans
+
+upload_file_key = 'Artistas/'+'Greeicy/'+'Fans/' + 'fans Greeicy.json'
+client.upload_file('fans Greeicy.json', BUCKET_NAME, upload_file_key)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Guardar informacion del artista Camilo en S3
+#Playlists
+
+upload_file_key = 'Artistas/'+'Camilo/'+'PlayList/' + 'playlist Camilo.json'
+client.upload_file('playlist Camilo.json', BUCKET_NAME, upload_file_key)
+
+#albums
+
+upload_file_key = 'Artistas/'+'Camilo/'+'Albums/' + 'albums Camilo.json'
+client.upload_file('albums Camilo.json', BUCKET_NAME, upload_file_key)
+
+#Canciones
+
+upload_file_key = 'Artistas/'+'Camilo/'+'canciones/' + 'canciones Camilo.json'
+client.upload_file('canciones Camilo.json', BUCKET_NAME, upload_file_key)
+
+#Fans
+
+upload_file_key = 'Artistas/'+'Camilo/'+'Fans/' + 'fans Camilo.json'
+client.upload_file('fans Camilo.json', BUCKET_NAME, upload_file_key)
+
