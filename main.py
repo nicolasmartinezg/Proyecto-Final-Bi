@@ -324,16 +324,29 @@ bpm120=bpm.json()
 with open('canciones BPM min120.json', 'w') as e:
     json.dump(bpm120, e, indent=4, sort_keys=True)
 
+#Endpoints para consultar los generos, los artistas que pertenecen a un genero, los podcast y la radio
+#ENDPOINT QUE ME TRAE TODOS LOS GENEROS DE LA API DEEZER
+URL_GENEROS='https://api.deezer.com/genre'
+g=requests.get(URL_GENEROS)
+GN= g.json()
+#guardar json
+with open('Generos Deezer.json', 'w') as e:
+    json.dump(GN, e, indent=4, sort_keys=True)
+
+#ENDPOINT QUE ME CONSULTA LOS ARTISTAS QUE PERTENECEN AL GENERO REGGAETON
+URL_GENEROS_REGGAETON='https://api.deezer.com/genre/122/artists'
+rg=requests.get(URL_GENEROS_REGGAETON)
+RG= rg.json()
+with open('Artistas Reggaeton.json', 'w') as e:
+    json.dump(RG, e, indent=4, sort_keys=True)
 
 
-
-
-
-
-
-
-
-
+#ENDPOINT QUE ME CONSULTA LA RADIO QUE PERTENECE AL GENERO REGGAETON
+URL_RADIO_REGGAETON='https://api.deezer.com/genre/122/radios'
+urr=requests.get(URL_RADIO_REGGAETON)
+URR=urr.json()
+with open('Radio Reggaeton.json', 'w') as e:
+    json.dump(URR, e, indent=4, sort_keys=True)
 
 
 
@@ -517,7 +530,20 @@ client.upload_file('canciones Camilo.json', BUCKET_NAME, upload_file_key)
 
 upload_file_key = 'Artistas/'+'Camilo/'+'Fans/' + 'fans Camilo.json'
 client.upload_file('fans Camilo.json', BUCKET_NAME, upload_file_key)
-
+#---------------------------------------------------------------------------------------------------
+#GUARDAR CONSULTAS ADICIONALES EN S3
 #canciones que tienen un bpm min de 120
 upload_file_key = 'Busquedas/'+'BPM_MIN_120/'+'canciones BPM min120.json'
 client.upload_file('canciones BPM min120.json', BUCKET_NAME, upload_file_key)
+
+#TODOS LOS GENEROS DE LA API
+upload_file_key = 'Generos/'+'Generos Deezer.json'
+client.upload_file('Generos Deezer.json', BUCKET_NAME, upload_file_key)
+
+#Artistas pertenecientes al genero Regaeton
+upload_file_key = 'Generos/'+'Reggaeton/'+'Artistas/'+'Artistas Reggaeton.json'
+client.upload_file('Artistas Reggaeton.json', BUCKET_NAME, upload_file_key)
+
+#RADIO QUE PERTENECE AL GENERO REGGAETON
+upload_file_key = 'Generos/'+'Reggaeton/'+'Radio/'+'Radio Reggaeton.json'
+client.upload_file('Radio Reggaeton.json', BUCKET_NAME, upload_file_key)
