@@ -348,7 +348,20 @@ URR=urr.json()
 with open('Radio Reggaeton.json', 'w') as e:
     json.dump(URR, e, indent=4, sort_keys=True)
 
-
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Endpoint ue me consulta los artistas que pertenecen al genero POP
+URL_GENEROS_POP='https://api.deezer.com/genre/132/artists'
+rPop=requests.get(URL_GENEROS_POP)
+jPop= rPop.json()
+with open('Artistas Pop.json', 'w') as e:
+    json.dump(jPop, e, indent=4, sort_keys=True)
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Endpoint que consulta el top radio de Deezer
+URL_RADIO_TOP='https://api.deezer.com/radio/top'
+rRadio=requests.get(URL_RADIO_TOP)
+jRadio= rRadio.json()
+with open('top Radio.json', 'w') as e:
+    json.dump(jRadio, e, indent=4, sort_keys=True)
 
 #credenciales para establecer la conexion con AWS
 ACCESS_KEY_ID =  "AKIASCCE5URAFIEVDIQA"
@@ -547,3 +560,11 @@ client.upload_file('Artistas Reggaeton.json', BUCKET_NAME, upload_file_key)
 #RADIO QUE PERTENECE AL GENERO REGGAETON
 upload_file_key = 'Generos/'+'Reggaeton/'+'Radio/'+'Radio Reggaeton.json'
 client.upload_file('Radio Reggaeton.json', BUCKET_NAME, upload_file_key)
+
+#Artistas pertenecientes al genero Pop
+upload_file_key = 'Generos/'+'Pop/'+'Artistas/'+'Artistas Pop.json'
+client.upload_file('Artistas Pop.json', BUCKET_NAME, upload_file_key)
+
+#Top de radios de Deezer
+upload_file_key = 'Busquedas/'+'topRadio/'+'top Radio.json'
+client.upload_file('top Radio.json', BUCKET_NAME, upload_file_key)
