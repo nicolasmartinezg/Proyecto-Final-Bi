@@ -27,7 +27,11 @@ PyCharm
 request: nos permite enviar solicitudes HTTP con Python sin necesidad de tanta labor manual, haciendo que la integración con los servicios web sea mucho más fácil.
 
 
-Flask.
+pandas.
+
+json.
+
+boto3.
 
 
 # Cuentas de los colaboradores en el proyecto
