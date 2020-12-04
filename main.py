@@ -22,8 +22,8 @@ auth_response = requests.post(DEEZER_REDIRECT_URI, {
 
 ''''''
 # credenciales para establecer la conexion con AWS
-ACCESS_KEY_ID = "AKIASCCE5URAFIEVDIQA"
-ACCESS_SECRET_KEY = "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"
+ACCESS_KEY_ID = ""
+ACCESS_SECRET_KEY = ""
 BUCKET_NAME = 'pruebasproyectofinal'
 client = boto3.client(
     's3',
